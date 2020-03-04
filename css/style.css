@@ -9,14 +9,14 @@
     background-color: hsla(215, 15%, 15%, 1);
   }
 
-  main {
+#main-doc {
       display: flex;
       flex-direction: row;
       height: calc(100vh - 32px);
       background-color: hsla(215, 15%, 15%, 1);
   }
 
-  .side-wrapper {
+#navbar {
       display: flex;
       flex-direction: column;
       position: fixed;
@@ -26,25 +26,26 @@
       border-right: 10px solid #1a1a1a;
   }
 
-  .header {
+.header {
       display: flex;
       justify-content: center;
       align-items: center;
       position: sticky;
       width: 100%;
       height: 80px;
+      font-size: 1.4em;
       background-color:#1a1a1a;
       color: hsla(0, 0%, 65%, 1);
   }
 
-  .side-navbar { 
+#link { 
       display: flex;
       height: calc(100% - 80px);
       overflow-y: scroll;
       background-color:  #1c1c1c;
   }
 
-  .side-navbar>ul>li {
+#link>ul>li {
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -55,7 +56,8 @@
     border-top: 1px solid hsla(0, 0%, 65%, 1);
   }
 
-  .side-navbar>ul>li>a, li>a:link, li>a:active, li>a:hover, li>a:visited {
+/*#link>ul>li>a, li>a:link, li>a:active, li>a:hover, li>a:visited*/
+.nav-link:link, .nav-link:active, .nav-link:hover, .nav-link:visited  {
       text-decoration: none;
       width: 100%;
       height: 100%;
@@ -64,7 +66,7 @@
       color: hsla(0, 0%, 65%, 1);
   }
 
-.side-navbar::-webkit-scrollbar {
+#link::-webkit-scrollbar {
     display: block;
     width: 1em;
     height: auto;
@@ -73,14 +75,14 @@
     border-radius: 15px;
 }
 
-.side-navbar::-webkit-scrollbar-thumb {
+#link::-webkit-scrollbar-thumb {
     background-color: #a6a6a6;
     border-radius: 20px;
     box-shadow: inset -3px 0px 5px 2px rgba(30,30,30,0.8),
     inset 3px 0px 5px 2px rgba(30,30,30,30.8);
   }
 
-.main-doc {
+.content {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -94,7 +96,7 @@
     color: hsla(0, 0%, 65%, 1);
 }
 
-.main-doc::-webkit-scrollbar {
+.content::-webkit-scrollbar {
     width: 1em;
     height: auto;
     background-color:#4d4d4d;
@@ -102,14 +104,14 @@
     border-radius: 15px;
 }
 
-.main-doc::-webkit-scrollbar-thumb {
+.content::-webkit-scrollbar-thumb {
     background-color:  #a6a6a6;
     border-radius: 20px;
     box-shadow: inset -3px 0px 5px 2px rgba(30,30,30,0.8),
     inset 3px 0px 5px 2px rgba(30,30,30,30.8);
   }
 
-.topic {
+.main-section {
     display: flex;
     flex-direction: column;
 }
@@ -120,7 +122,7 @@
     margin: 10px;
 }
 
-.topic>p {
+.main-section>p {
     width: 90%;
     margin: .5em auto;
     font-size: 1.2em;
@@ -128,7 +130,7 @@
     line-height: 1.5em;
 }
 
-.topic > ul {
+.main-section > ul {
     display: block;
     align-self: center;
     width: 80%;
